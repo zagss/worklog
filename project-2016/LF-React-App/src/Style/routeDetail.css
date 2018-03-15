@@ -1,0 +1,58 @@
+.r-li{
+  padding:1rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+.r-li div{
+  width: 100%;
+
+}
+.r-li h3{
+  font-size: 1.6rem;
+  padding: 0.5rem 3.5rem ;
+  font-family: sans-serif;
+  background: url('../Image/ic_hangxingxianlu.png') no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+.r-li:nth-child(2) h3{
+  background: url('../Image/ic_xianlujianjie.png') no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+.r-li:nth-child(3) h3{
+  background: url('../Image/ic_xianlutu.png') no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+div.r-li div p.route-line{
+  width: 50%;
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #666;
+  margin: 1rem 0;
+  padding-left: 2rem;
+  height: 2.5rem;
+  overflow: hidden;
+  line-height: 2.5rem;
+  border-bottom: none
+}
+.route-line span{
+  background: url(../Image/biankuang_45.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  color: #f8c165;
+
+}
+.r-li-con{
+  text-indent: 2rem;
+  font-size: 1.3rem;
+}
+.li_3 p{
+  width: 100%;
+  height: 15rem;
+  background: url('../Image/hold.png') no-repeat;
+  background-position: center;
+  background-size: cover;
+}

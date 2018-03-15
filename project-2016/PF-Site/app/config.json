@@ -1,0 +1,24 @@
+{
+    "data": [{
+        "name": "section-top",
+        "id": "swipertop"
+    }, {
+        "name": "section-award",
+        "id": "award"
+    }, {
+        "name": "section-screen-top",
+        "id": "top"
+    }, {
+        "name": "section-screen-bottom",
+        "id": "bottom"
+    }, {
+        "name": "section-video",
+        "id": "video"
+    }, {
+        "name": "section-exhibit",
+        "id": "exhibit"
+    }, {
+        "name": "section-fragment",
+        "id": "fragment"
+    }]
+}

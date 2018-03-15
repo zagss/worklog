@@ -1,0 +1,188 @@
+{{extend './layout.art'}}
+
+{{block 'header'}}
+    <div class="container">
+        <h2 class="logo">
+            绘梦未来
+        </h2>
+        
+        <div>
+            <div class="right"></div>
+        </div>
+    </div>
+{{/block}}
+
+{{block 'section'}}
+    {{each data}}
+        {{if $value.id == "swipertop"}}
+            <section class="section {{$value.name}}">
+                <div class="container">
+                   <div class="slide-outer">
+                    <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide slide-01"></div>
+                                <div class="swiper-slide slide-02"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pfTitle" class="title title-style-01">
+                        <h1 class="phantom-item-2"><span class="text">小米MIX2</span></h1>
+                        <h2 class="phantom-item-3"><span class="text">全面屏 黑科技</span></h2>
+                        <p class="phantom-item-4"><span class="text">正面几乎全是屏幕，仿佛握着一块透明玻璃</span></p>
+                        <div class="price phantom-item-4">
+                            <div class="J_productPriceWrapper" data-gid="2173500019">
+                                <span class="J_currentPrice text">
+                                    <i class="price-num num">3299</i>元起
+                                </span>
+                                <span class="text">黑色陶瓷版</span>
+                            </div>
+                            <div class="J_productPriceWrapper">
+                                <span class="J_currentPrice text">
+                                    <i class="price-num num">4699</i>元
+                                </span>
+                                <span class="text">全陶瓷尊享版</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        {{else if $value.id == "award"}}
+            <section class="section {{$value.name}}">
+                <div class="container">
+                    <div class="award">
+                        <dl class="phantom-item-1">
+                            <dt>
+                                <strong><span class="text">2016.10</span></strong>
+                                <span class="text">第一款 全面屏手机小米MIX 发布</span>
+                            </dt>
+                            <dd>
+                                <span class="text">全球极负盛名的设计大师 菲利普·斯塔克 设计<br>&nbsp;</span>
+                                <div class="award-logo award-logo-1"></div>
+                            </dd>
+                        </dl>
+                        <dl class="phantom-item-2">
+                            <dt>
+                                <strong><span class="text">2017.08</span></strong>
+                                <span class="text">小米MIX 荣获 IDEA 设计金奖</span>
+                            </dt>
+                            <dd>
+                                <span class="text">IDEA 是美国工业设计师协会 和 美国商业周刊 <br>为全世界杰出工业设计作品颁发的创新大奖</span>
+                                <div class="award-logo award-logo-2"></div>
+                            </dd>
+                        </dl>
+                        <dl class="phantom-item-3">
+                            <dt>
+                                <strong><span class="text">2017.09</span></strong>
+                                <span class="text">小米MIX 被芬兰国家设计博物馆收藏</span>
+                            </dt>
+                            <dd>
+                                <span class="text">“小米MIX 指明了智能手机未来的设计方向”<br>—— Jukka Savolainen 芬兰国家设计博物馆馆长</span>
+                                <div class="award-logo award-logo-3"></div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+        {{else if $value.id == 'top'}}
+            <section class="section {{$value.name}}">
+                <div class="container">
+                    <h3 class="phantom-item-1"><span class="text">正面几乎全是屏幕</span></h3>
+                    <h2 class="phantom-item-2"><span class="text">全面屏2.0</span></h2>
+                    <p class="phantom-item-3"><span class="text">得益于不断进化的全面屏科技，使得屏幕底边革命性地再次缩短 12%，<br>为 18:9 全面屏带来更纯粹的观看体验。点亮的瞬间，你会发现这就是全面屏真正的样子。</span></p>
+                </div>
+            </section>
+        {{else if $value.id == 'bottom'}}
+            <section class="section {{$value.name}}">
+                <div class="container">
+                    <h3 class="phantom-item-1"><span class="text">全新导管式微型听筒设计</span></h3>
+                    <h2 class="phantom-item-2"><span class="text">通话质量大幅提升</span></h2>
+                    <p class="phantom-item-3"><span class="text">采用大功率听筒搭配精密设计的导管结构，当电话接通时，音质较第一代小米MIX 大幅提升。<br>即使在嘈杂环境中，仍可保证清晰的听音效果。</span></p>
+                </div>
+            </section>
+        {{else if $value.id == 'video'}}
+            <section class="section {{$value.name}}">
+                <div class="wrap">
+                    <div class="content">
+                        <div class="container">
+                            <div class="context">
+                                <i class="play_icon J_play" data-video="//v.mifile.cn/b2c-mimall-media/b6b2f066a556cf2793fd36532b611dac.mp4"></i>
+                                <h2 class="title webfont">观看《智能家庭联动》视频</h2>
+                            </div>
+                        </div>
+                        <div class="video-con">
+                            <video class="video" autoplay="autoplay" loop="loop">
+                                <source src="//c1.mifile.cn/f/i/17/mitv4/55/index_video.mp4" type="video/mp4">
+                                <source src="//c1.mifile.cn/f/i/17/mitv4/55/index_video.webm" type="video/webm">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        {{else if $value.id == 'exhibit'}}
+            <section class="section {{$value.name}}">
+                <div class="content">
+                    <div class="phantom-item-2 icon-hd"></div>
+                    <h2 class="phantom-item-3 webfont title-hd">小米影视极清会员，免费升级上线</h2>
+                    <p class="phantom-item-4 text">小米电视联合爱奇艺、迅雷星域CDN，全新推出极清专区，不仅有更清晰的大片、电视剧，<br>还解决了高清节目卡顿的难题。 </p>
+                </div>
+                <div class="wrap">
+                    <ul class="poster-list clearfix">
+                        <li class="poster poster01"></li>
+                        <li class="poster poster02"></li>
+                        <li class="poster poster03"></li>
+                        <li class="poster poster04"></li>
+                        <li class="poster poster05"></li>
+                        <li class="poster poster06"></li>
+                        <li class="poster poster07"></li>
+                    </ul>
+                </div>
+            </section>
+        {{else if $value.id == 'fragment'}}
+            <section class="section {{$value.name}}">
+                <div class="content">
+                    <h2 class="webfont title phantom-item-2">4K + HDR<sup>*</sup><br>你喜欢的大片，现在更震撼</h2>
+                    <p class="item-des phantom-item-3">层次更分明、图像更立体、色彩更丰富，你看到的就是世界本来的样子。</p>
+                    <div class="pic-con J_picCon">
+                        <div class="pic">
+                            <div class="pic4k-block cur">
+                                <div class="pic2k pick J_2k1 animate">
+                                    <ul class="text">
+                                        <li class="item1 J_item011">非4K</li>
+                                        <li class="item2 J_item021">4K</li>
+                                    </ul>
+                                </div>
+                                <div class="pic4k pick J_4k"></div>
+                            </div>
+                            <div class="pichdr-block">
+                                <div class="pic2k pick J_2k1 animate">
+                                    <ul class="text">
+                                        <li class="item1 J_item011">优化前</li>
+                                        <li class="item2 J_item021">优化后</li>
+                                    </ul>
+                                </div>
+                                <div class="pic4k pick J_4k"></div>
+                            </div>
+                            <div class="size">
+                                <div class="sizeLine"></div>
+                            </div>
+                            <div class="line J_line1 animate">
+                                <div class="dash J_dash" data-index="1"></div>
+                            </div>
+                            <p>*仅处理器支持HDR</p>
+                        </div>
+                    </div>
+                    <ul class="desc tabSwitch">
+                        <li class="four_k active" data-type="4k">
+                            <div class="text">4K</div>
+                            <p class="border"></p>
+                        </li>
+                        <li class="HDR" data-type="hdr">
+                            <div class="text">HDR</div>
+                            <p class="border"></p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        {{/if}}
+    {{/each}}
+{{/block}}

@@ -1,0 +1,22 @@
+.ltlc .lt-content form p span{
+  color: #000;
+}
+.ltlc .lt-content form p input{
+  font-weight: normal;
+  text-align: left;
+}
+.ltlc-att{
+  width: 100%;
+  text-align: center;
+}
+.ltlc-att span{
+  background: url(../Image/ic_tip.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 1.6rem;
+  font-size: 1.5rem;
+}
+.ltlc .lt-content{
+  margin-top: 0
+}

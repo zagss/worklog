@@ -1,0 +1,284 @@
+html{
+  font-size: 62.5%;
+  width: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'simhei';
+  width: 100%;
+}
+
+/*slider-start*/
+div.slick-slider{
+  margin-bottom: 0;
+  height: 21.85rem;
+}
+.slick-slider .slick-dots {
+  bottom: 10px;
+}
+.slick-active button{
+  color: #fff;
+}
+
+.slick-slider .slick-dots li.slick-active button:before{
+	color: #fff;
+}
+
+.slick-slider .slick-dots li button:before{
+	color: #ddd;
+}
+div.slick-slider .slick-pic {
+  height: 21.8rem;
+  background: url(../Image/hold.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  position: relative;
+}
+
+/*slider-end*/
+
+/*yachtmessage-start*/
+.messageA{
+  text-align: center;
+  width: 100%;
+
+  height: 11rem;
+  background: #fff
+}
+.messageA div{
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 1rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+.messageA div h3{
+  font-size: 2rem;
+}
+.messageA div p{
+  color: red;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.9rem;
+}
+.messageA div p:nth-child(3){
+  color: #FFD293;
+  font-size: 1.5rem;
+}
+.messageB{
+  height: 7rem;
+  background: #fff;
+  padding-top: 1rem;
+}
+.messageB div{
+  display: inline-block;
+  padding: 0 1.5rem;
+  float: left;
+}
+
+.messageB div p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.messageB div:nth-child(1){
+  width: 70%;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.messageB div:nth-child(1) p{
+  padding-left: 1.8rem;
+  margin-bottom: 1rem;
+}
+.messageB div:nth-child(1) p {
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+.messageB div:nth-child(1) p:nth-child(1){
+  background-image: url(../Image/ic_yacht.png);
+}
+.messageB div:nth-child(1) p:nth-child(2) {
+  background-image: url(../Image/ic_location.png);
+}
+.messageB div:nth-child(2){
+  width: 30%;
+}
+.messageB div:nth-child(2) span{
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  background: url(../Image/iphone.png) no-repeat center;
+  background-size: 60%;
+  border: 2px solid #000;
+  border-radius: 50%;
+  float: right;
+}
+.messageC{
+  background: #fff
+}
+.messageC div:nth-child(1) h3{
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  padding-top: 1rem;
+  position: relative;
+}
+.messageC div:nth-child(1) h3 span{
+  font-size: 1.5rem;
+}
+.messageC div:nth-child(1) h3::before{
+  content: "";
+  display: inline-block;
+  margin-right: 1rem;
+  width: 4rem;
+  height: 1px;
+  background-color: #000;
+  vertical-align: middle;
+}
+.messageC div:nth-child(1) h3::after{
+  content: "";
+  display: inline-block;
+  margin-left: 1rem;
+  width: 4rem;
+  height: 1px;
+  background-color: #000;
+    vertical-align: middle;
+}
+.messageC div:nth-child(1) h3 span:after{
+  content: "";
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  background-color: #000;
+  /*transform: translateY(-50%);*/
+  transform: rotate(45deg);
+  margin-left: 0.6rem;
+  position: relative;
+  top: -0.3rem;
+}
+.messageC div:nth-child(1) h3 small:before{
+  content: "";
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  background-color: #000;
+  transform: rotate(45deg);
+  margin-right: 0.6rem;
+  position: relative;
+  top: -0.3rem;
+}
+.messageC div:nth-child(2){
+  width: 100%;
+}
+.messageC .routeslist{
+  border: 1px solid #eee;
+  border-bottom: none;
+  display: flex;
+  flex-direction: row;
+}
+.messageC .routeslist p{
+  font-size: 1.5rem;
+  height: 5.6rem
+}
+.messageC .routeslist p:nth-child(1){
+  width: 80%;
+  border-right: 1px solid #eee;
+  padding: 0.5rem 1rem
+}
+.messageC .routeslist p:nth-child(1) a{
+  color: #f6af38;
+  font-weight: bold;
+  font-size:1.3rem;
+  float: right;
+  display: block;
+  text-align: right;
+}
+.messageC .routeslist p:nth-child(2){
+  width: 20%;
+  text-align: center;
+  border-bottom: none;
+  font-weight: bold;
+  vertical-align: middle;
+}
+.messageC .routeslist p:nth-child(2) small{
+  display: inline-block;
+  vertical-align: middle;
+}
+.messageForm{
+  padding: 1.5rem;
+}
+.messageForm div.mf{
+  border-bottom: 1px solid #eee;
+}
+.mf2{
+  border: 1px solid #eee;
+  border-top: none;
+  padding: 1rem;
+}
+.book{
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  background:  linear-gradient(to right,rgba(89,221,163,0.9),rgba(81,199,177,1));
+  position: fixed;
+  bottom: 0;
+}
+/*yachtmessage-end*/
+.yd-tab{
+  display: inline-block;
+  width: 33.33%;
+  text-align: center;
+  line-height: 3em;
+  font-size: 1.6em;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.y-t{
+  width: 100%;
+  height: 10rem;
+  background: #fff;
+  margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+/*ShipDetailText end*/
+.yachtValue {
+  width: 100%;
+  margin: 1rem auto;
+  background: #fff;
+}
+.yachtValue h1 small,big{
+  font-size: 1.6rem;
+  font-weight: normal;
+  display: inline-block;
+  width: 50%;
+}
+.yachtValue h1{
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0.5rem 2rem;
+}
+
+
+
+.yachtValue h5 p{
+  font-size: 1.5rem;
+  background: url('../Image/star.png') no-repeat;
+  background-position: right;
+  background-size: contain;
+  text-align: left;
+}
+.yachtValue h5{
+  padding: 0.5rem 2rem
+}

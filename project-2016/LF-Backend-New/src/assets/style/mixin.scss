@@ -1,0 +1,99 @@
+$red: #ff3b30;
+$bgc: #f7f8fa;
+// 背景图片
+@mixin bgi($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+//宽高
+@mixin wh($width, $height){
+	width: $width;
+	height: $height;
+}
+
+@mixin mwh($width, $height){
+	min-width: $width;
+	min-height: $height;
+}
+
+@mixin tr($top, $right) { 
+	position: absolute;
+	top: $top;
+    right: $right;
+}
+//定位上下居中
+@mixin ct {  
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin cty($height) {  
+	position: absolute;
+	top: 50%;
+    margin-top: -$height/2;
+}
+
+// flex
+@mixin fj($type: space-between){
+	display: flex;
+	justify-content: $type;
+    align-items: center;
+}
+
+@mixin fc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+// 清楚浮动
+@mixin cf {
+    clear: both;
+	content: '';
+	display: table;
+}
+
+// 滚动条
+
+@mixin sb {
+	/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+	::-webkit-scrollbar  
+	{  
+		width: 0px;  
+		height: 0px;  
+		// background-color: #F5F5F5;  
+	}  
+	
+	// /*定义滚动条轨道 内阴影+圆角*/  
+	// ::-webkit-scrollbar-track  
+	// {  
+	// 	// -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);  
+	// 	// border-radius: 10px;  
+	// 	background-color: #F5F5F5;  
+	// }  
+	
+	// /*定义滑块 内阴影+圆角*/  
+	// ::-webkit-scrollbar-thumb  
+	// {  
+	// 	// border-radius: 10px;  
+	// 	// -webkit-box-shadow: inset 0 0 6px #F5F5F5;
+	// 	background-color: #ddd;  
+	// }  
+}
+
+@mixin sbr {
+	::-webkit-scrollbar  
+	{  
+		width: 15px;  
+		height: 15px;  
+		background-color: #F5F5F5;  
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: #ddd;
+		&:active {
+			background-color: #aaa;
+		}
+	}
+}

@@ -1,0 +1,6 @@
+
+<header>
+    {{block 'header'}}{{/block}}
+</header>
+
+<div id="indexBody">{{block 'section'}}{{/block}}</div>

@@ -1,0 +1,125 @@
+html {
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+*{
+    -webkit-touch-callout:none;  /*系统默认菜单被禁用*/
+    -webkit-user-select:none; /*webkit浏览器*/
+    -khtml-user-select:none; /*早期浏览器*/
+    -moz-user-select:none;/*火狐*/
+    -ms-user-select:none; /*IE10*/
+    user-select:none;
+}
+input {
+     -webkit-user-select:auto; /*webkit浏览器*/
+     font-family: "Arial","Microsoft YaHei","\9ED1\4F53","\5B8B\4F53",sans-serif
+}
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+html,
+body,
+div,
+ul,
+li,
+p,
+footer,
+header,
+article,
+a,
+b,
+em,
+nav,
+form,
+input,
+textarea,
+select,
+button,
+i,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.book{
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  background:  linear-gradient(to right,rgba(89,221,163,0.8),rgba(81,199,177,1));
+  position: fixed;
+  bottom: 0;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+
+
+/*ODSC --start*/
+div.odsc p::before{
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  border: 3px solid #56B686;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-right: 1rem
+}
+div.odsc p:nth-child(2)::before{
+  border: 3px solid #E0767A;
+}
+/*ODSC --end*/
+
+
+
+
+
+
+
+
+
+
+
+/*TOS-----start*/
+div.tos{
+  padding: 0 0.3rem
+}
+div.tos h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+div.tos dt {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+div.tos dd{
+  margin-left: 2%;
+}
+div.tos  span {
+  font-weight: bold;
+}
+/*TOS-----end*/

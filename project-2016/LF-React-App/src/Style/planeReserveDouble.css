@@ -1,0 +1,95 @@
+
+/*planeform-start*/
+.form0{
+  width: 100%;
+  background-color: #fff;
+}
+.form0 p{
+  height: 60px;
+  width: 100%;
+  line-height: 60px;
+  padding: 10px;
+  border-color: #fafafa;
+}
+.form0 p span{
+  display: inline-block;
+  width: 10%;
+  height:33px;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.form0 p:nth-child(1) span{
+  background-image: url(../Image/ic_date.png);
+}
+.form0 p:nth-child(2).checkDate2 span{
+  background-image: url(../Image/efaefeaa_03.jpg);
+}
+.form0 p:nth-child(3).name2 span{
+  background-image: url(../Image/ic_name.png);
+}
+.form0 p:nth-child(4).tel2 span{
+  background-image: url(../Image/ic_phone.png);
+}
+.form0 p:nth-child(5) span{
+  background-image: url(../Image/ic_seat2.png);
+}
+.form0 form p input,select.prs{
+  font-weight: bold;
+  width: 85%;
+  height: 33px;
+  text-align: left;
+  display: inline-block;
+}
+/*.form0 form p:nth-child(1) input{
+
+  float: none;
+  position: absolute;
+  line-height: 43px;
+}*/
+/*.form0 form p:nth-child(1) span.s2{
+  width: 3%;
+  height: 25px;
+  position: relative;
+  top: 5px;
+  background-image: url(../Image/arrow_grey.png);
+}*/
+
+.form0 form p:nth-child(2) span.s2{
+  width: 8%;
+  height: 25px;
+  position: relative;
+  top: 5px;
+  background-image: url(../Image/arrow_grey.png);
+}
+.s2 {
+  float: right;
+}
+.form0 form p:nth-child(5){
+  height: 60px;
+  width: 100%;
+  line-height: 60px;
+  padding: 10px;
+  border-color: #fafafa;
+}
+.form0 form p:nth-child(5) input{
+  font-size: 1.5rem;
+}
+.form0 form p:nth-child(6){
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0;
+  text-align: center;
+  color: #aaa;
+  font-size: 1rem;
+}
+.form0 form p:nth-child(6) small{
+  padding-left: 1.5rem;
+  background-image: url(../Image/ic_tip.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 1.2rem;
+}
+/*planeform-end*/
