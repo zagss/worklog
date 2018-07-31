@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+    <title>人气排行查询</title>
+    <style type="text/css">
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      html, body {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      body {
+        /* background-color: #de1f26; */
+        background: url(images/paihangbang/bg1.png) 0 0 no-repeat fixed;
+        background-size: 100% 100%;
+      }
+      .sup-container {
+        position: relative;
+        width: 670px;
+        margin: 0px auto;
+        background: url(images/paihangbang/bg1.png) 0 0 no-repead;
+        background-size: 100% auto;
+      }
+      @media (max-width:670px) {
+        .sup-container {
+          width: 100%;
+          margin: 0px auto;
+        }
+      }
+
+      .sup-header {
+        overflow: hidden;
+        position: relative;
+        /* background: #de1f26; */
+      }
+      .sup-header > div:nth-child(1) {
+        /* width: 28%;
+        float: left;
+        padding: 15px 0px;
+        margin: 20px 0px;
+        border-right: solid 1px #dfdfdf; */
+        text-align: center;
+        margin-top: 30px;
+      }
+      .sup-header > div:nth-child(1) > img {
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+      }
+      .sup-header > div:nth-child(2) {
+        /* width: 60%;
+        margin-left: 9%;
+        float: left;
+        padding: 15px 0px; */
+        text-align: center;
+        margin: 15px 0px;
+      }
+
+      /* .sup-header > img {
+        width: 80px;
+        height: 80px;
+        border-radius: 80px;
+      }
+
+      .sup-header > h3 {
+        color: #666;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+      } */
+
+      .sup-header > div > p {
+        font-size: 18px;
+        color: #fff;
+        /* font-weight: bold; */
+        margin-top: 8px;
+        /* line-height: 1.5; */
+        display: inline-block;
+        font-weight: 700;
+        /* border-right: solid 1px #fff; */
+        padding: 0px 10px;
+        margin: 8px 0px;
+        position: relative;
+      }
+      .sup-header > div > p::after {
+        content: "";
+        width: 1px;
+        height: 18px;
+        background-color: #fff;
+        position: absolute;
+        right: 0px;
+        top: 5px;
+      }
+      .sup-header > div > p:last-child::after {
+        display: none;
+      }
+      .sup-header > div > p > span {
+        color: #fff;
+        font-size: 20px;
+      }
+
+      .sup-sup {
+        /* border-top: solid 1px #de1f26; */
+        /* margin: 0px 35px 0px; */
+        /* padding-top: 35px; */
+        min-height: 300px;
+        background-color: #fff;
+        margin: 0px 6px;
+        border-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 8px;
+      }
+      .sup-sup > h3 {
+        font-size: 15px;
+        font-weight: bold;
+        color: #333;
+      }
+      .sup-sup > div {
+        overflow: hidden;
+        margin: 15px 15px;
+        /* background: #f0f0f0; */
+      }
+      #box > div {
+
+        /* border-left: 1px #ddd solid; */
+        /* border-right: 1px #ddd solid; */
+      }
+      #userChildren {
+        background-color: #fff;
+        margin: 10px;
+        border-radius: 8px;
+        overflow: hidden;
+        padding: 15px;
+      }
+        #box > div:nth-child(1) > div:nth-child(1), #box > div:nth-child(2) > div:nth-child(1) {
+          /* border-top: solid 1px #ddd; */
+        }
+      #box > div:nth-child(1) > div {
+        overflow: hidden;
+        padding: 6px 0px;
+        /* margin-bottom: 8px; */
+        /* border-bottom: solid 1px #ddd; */
+      }
+      #userChildren > div {
+        overflow: hidden;
+      }
+      #box > div:nth-child(1) > div > div:nth-child(1) , #userChildren > div > div:nth-child(1){
+        margin-left: 0px;
+        float: left;
+        width: 50px;
+      }
+      #box > div:nth-child(1) > div > div > img , #userChildren > div > div > img{
+        width: 50px;
+        height: 50px;
+        border-radius: 35px;
+
+      }
+      #box > div:nth-child(1) > div > div:nth-child(2), #userChildren > div > div:nth-child(2){
+        overflow: hidden;
+        width: 100%;
+        margin-left: -65px;
+        float: right;
+      }
+      #box > div:nth-child(1) > div > div > div ,#userChildren > div > div > div{
+        margin-left: 65px;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      /* #box > div:nth-child(1) > div > div > div > span {
+        float: left;
+        margin-left: 23px;
+
+
+      } */
+
+      #box > div:nth-child(1) > div > div > div > span:nth-child(1) , #userChildren > div > div > div > span:nth-child(1){
+        float: left;
+        width: 100%;
+        float: left;
+        margin-right: -160px;
+        margin-top: 13px;
+        font-size: 19px;
+        font-weight: 700;
+      }
+
+      #box > div:nth-child(1) > div > div > div > span:nth-child(1) > span , #userChildren > div > div > div > span:nth-child(1) > span{
+        width: 100%;
+        margin-right: 160px;
+      }
+
+      #box > div:nth-child(1) > div > div > div > span:nth-child(2) , #userChildren > div > div > div > span:nth-child(2){
+        float: right;
+        width: 100px;
+        font-size: 15px;
+        font-weight: 100;
+        color: #666;
+        margin-right: 55px;
+        margin-top: 15px;
+      }
+      #box > div:nth-child(1) > div > div > div > span:nth-child(2) > img , #userChildren > div > div > div > span:nth-child(2) > img{
+        width: 11px;
+        margin-right: 5px;
+      }
+
+      #box > div:nth-child(2) {
+        display: none;
+      }
+      #box > div:nth-child(2) > div {
+        overflow: hidden;
+        /* margin: 5px 0px; */
+        padding: 8px 0px;
+        /* border-bottom: solid 1px #efefef; */
+        /* border-bottom: solid 1px #ddd; */
+      }
+
+      /* #box > div:nth-child(2) > div > div:nth-child(1) {
+        width:
+      } */
+      #box > div:nth-child(2) > div > img {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+        float: left;
+        border-radius: 50%;
+        border: solid 1px #efefef;
+      }
+
+      #box > div:nth-child(2) > div > span {
+        width: 19px;
+        float: left;
+        color: #333;
+        display: inline-block;
+        /* width: 60px; */
+
+        line-height: 44px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+        margin-right: 18px;
+
+      }
+      #box > div:nth-child(2) > div > div {
+        float: right;
+        overflow: hidden;
+        width: 100%;
+        margin-left: -100px;
+      }
+      #box > div:nth-child(2) > div > div > div {
+        margin-left: 100px;
+      }
+      #box > div:nth-child(2) > div > div > div > span:first-child{
+        line-height: 1.5;
+        font-size: 14px;
+        color: #666;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+        margin-top: 11px;
+        width: 100%;
+        float: left;
+        margin-right: -100px;
+      }
+      #box > div:nth-child(2) > div > div > div > span:first-child > span {
+        width: 100%;
+        margin-right: 100px;
+      }
+      #box > div:nth-child(2) > div > div > div > span:last-child {
+        line-height: 1.5;
+        font-size: 14px;
+        color: #666;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+        margin-top: 11px;
+        float: right;
+        width: 100px;
+      }
+
+      #box > div:nth-child(2) > div > div > div > span:last-child > img {
+        width: 10px;
+        margin-right: 5px;
+      }
+
+      ul {
+        list-style: none;
+        overflow: hidden;
+        border: solid 1px #de1f26;
+        /* margin-bottom: 30px; */
+        margin-left: 15px;
+        margin-right: 15px;
+        border-radius: 35px;
+      }
+
+      #tag li {
+        float: left;
+        width: 50%;
+        color: #666;
+        padding: 5px 0px;
+        text-align: center;
+        line-height: 1.8;
+      }
+      .click {
+        background-color: #de1f26 !important;
+        color: #fff !important;
+      }
+      .footer {
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+        margin: 35px 0px;
+      }
+      .user-children {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background: rgba(0,0,0,0.65);
+        z-index: 10000;
+        display: none;
+        overflow-y: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sup-container">
+      <header class="sup-header">
+        <div>
+          <img src="" id="headimgurl"/>
+        </div>
+        <div>
+          <p><span id="num"></span>人气</p>
+          <p>还差<span id="need_num"></span>人气</p>
+          <p>排名<span id="user_cur_paiming"></span></p<
+        </div>
+      </header>
+      <div class="sup-sup">
+        <ul id="tag">
+          <li class="click">我的好友</li>
+          <li>人气排行</li>
+        </ul>
+        <div id="box">
+          <div id="supporters">
+
+          </div>
+          <div id="paihang">
+
+          </div>
+        </div>
+      </div>
+      <div class="user-children" onclick="hiddenChildren()">
+        <div id="userChildren"></div>
+      </div>
+      <div class="footer" style="color:#f0f0f0;">@小裂变 - 技术支持咨询 <span id="phone">18551985509</span></div>
+    </div>
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script type="text/javascript">
+      (function () {
+
+        $('#tag').children('li').each(function (i) {
+          $(this).click(function () {
+            $('#box').children('div').eq(i).show().siblings('div').hide();
+            $(this).addClass('click').siblings('li').removeClass('click');
+          })
+        })
+
+        window.hiddenChildren = function () {
+          $('.user-children').hide();
+          $('#userChildren').empty();
+        }
+
+        var params = window.location.search.split('&');
+        var openid = params[0].split('=')[1];
+        var eventkey = params[1].split('=')[1];
+        var uid = params[2].split('=')[1];
+        var atype = (params[3] && params[3].split('=')[1]);
+
+        if (parseInt(uid, 10) == 2008) {
+          $('#phone').text('13146416862');
+        }
+
+        if (parseInt(uid, 10) == 2034) {
+          $('.footer').text('');
+        }
+
+        if (parseInt(uid, 10) == 2036) {
+          $('#phone').text('18801033475');
+        }
+
+        var initlist = function (res) {
+
+          console.log(res);
+          $('#headimgurl').attr('src', res.headimgurl);
+          $('#num').text(res.num);
+          $('#need_num').text(parseInt(res.need_num) <= 0 ? 0 : res.need_num);
+          $('#user_cur_paiming').text(res.user_cur_paiming);
+
+          var html = "";
+          for (var i = 0, len = res.supporters_nickname.length; i < len; i++) {
+            html += "<div>"+
+              "<div><img src='"+ res.supporters_head[i] +"' /></div>"+
+              "<div><div>"+
+                "<span><span onclick='show_children(this)' data-openid='"+ res.new_supporters[i].openid +"'>" + res.supporters_nickname[i] + "</span></span>"+
+                "<span><img src='/images/paihangbang/fo2.png'/>已有" + res.new_supporters[i].size + "人气</span>"+
+              "</div></div>"+
+            "</div>";
+          }
+          $('#supporters').empty();
+          $('#supporters').append(html);
+
+          var html = "";
+          for (var i = 0, len = res.hotuser.length; i < len; i++) {
+            html += '<div>'+
+              '<span>'+ res.hotuser[i].paiming +'</span>'+
+              '<img src="'+ res.hotuser[i].headimgurl +'" />'+
+              '<div><div>'+
+                '<span><span>'+ res.hotuser[i].nickname +'</span></span>'+
+                '<span><img src="/images/paihangbang/fo2.png" />已有'+ res.hotuser[i].size +'人气</span>'+
+              '</div></div>'+
+            '</div>';
+          }
+
+          $('#paihang').empty();
+          $('#paihang').append(html);
+        };
+
+        window.show_children = function (e) {
+          var openid = $(e).attr('data-openid');
+          console.log(openid);
+          $.get('http://wx.xiaoliebian.com/admin/show_user_children', {openid: openid, eventkey: eventkey}, function (res) {
+
+            if (parseInt(res.code) == 200) {
+              if (parseInt(res.supporters_size.length) == 0) {
+                return;
+              }
+              console.log(res);
+              var html = "";
+              for (var i = 0, len = res.supporters_nickname.length; i < len; i++) {
+                html += "<div>"+
+                  "<div><img src='"+ res.supporters_head[i] +"' /></div>"+
+                  "<div><div>"+
+                    "<span><span>" + res.supporters_nickname[i] + "</span></span>"+
+                    "<span><img src='/images/paihangbang/fo2.png'/>已有" + res.supporters_size[i] + "人气</span>"+
+                  "</div></div>"+
+                "</div>";
+              }
+
+              $('#userChildren').empty();
+              $('#userChildren').append(html);
+              $('.user-children').show();
+            }
+          });
+        }
+
+        var storage_key = "count_user_" + eventkey;
+
+        var count_user = window.localStorage.getItem(storage_key);
+        if (count_user == null || count_user == "" || count_user == undefined) {
+          $.get('http://wx.xiaoliebian.com/admin/count_user', {openid: openid, eventkey: eventkey}, function (res) {
+            if (parseInt(res.code) == 200) {
+
+              window.localStorage.setItem(storage_key, JSON.stringify(res));
+              var date = new Date();
+              date.setTime(date.getTime()+(2*60*1000));
+              $.cookie(storage_key, eventkey, { expires: date });
+              initlist(res);
+            }
+          })
+        }
+
+        else {
+          // 缓存读取
+          // count_user = JSON.parse(count_user);
+          // initlist(count_user);
+          // return;
+          var storage_status = $.cookie(storage_key);
+          if (storage_status == null || storage_status == undefined || storage_status == false || storage_status == "" || storage_status == "null") {
+
+            $.get('http://wx.xiaoliebian.com/admin/count_user', {openid: openid, eventkey: eventkey}, function (res) {
+              if (parseInt(res.code) == 200) {
+
+                window.localStorage.setItem(storage_key, JSON.stringify(res));
+                var date = new Date();
+                date.setTime(date.getTime()+(2*60*1000));
+                $.cookie(storage_key, eventkey, { expires: date });
+                initlist(res);
+              }
+            })
+          }
+
+          else {
+            count_user = JSON.parse(count_user);
+            initlist(count_user);
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>

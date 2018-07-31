@@ -1,0 +1,10 @@
+{
+  "name": "fan_rank",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.2",
+    "scss": "^0.2.4"
+  }
+}
