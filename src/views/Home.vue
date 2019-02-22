@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <router-link to="/about"><HelloWorld msg="ELF"/></router-link>
+    <router-link to="/about"><HelloWorld msg="清檬"/></router-link>
   </div>
 </template>
 
